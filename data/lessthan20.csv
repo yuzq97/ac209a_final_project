@@ -1,0 +1,411 @@
+NAME OF DATA ELEMENT,dev-category,developer-friendly name,API data type,INDEX,VARIABLE NAME,VALUE,LABEL,SOURCE,SHOWN/USE ON SITE,NOTES
+Unit ID for institution,root,id,integer,,UNITID,,,IPEDS,Yes,
+8-digit OPE ID for institution,root,ope8_id,string,varchar(10),OPEID,,,IPEDS,Yes,
+6-digit OPE ID for institution,root,ope6_id,string,varchar(10),OPEID6,,,IPEDS,Yes,
+Institution name,school,name,autocomplete,fulltext,INSTNM,,,IPEDS,Yes,
+City,school,city,autocomplete,varchar(200),CITY,,,IPEDS,Yes,
+State postcode,school,state,string,varchar(50),STABBR,,,IPEDS,Yes,
+ZIP code,school,zip,string,varchar(20),ZIP,,,IPEDS,,
+Accreditor for institution,school,accreditor,string,,ACCREDAGENCY,,,FSA,,
+URL for institution's homepage,school,school_url,string,varchar(200),INSTURL,,,IPEDS,Yes,
+URL for institution's net price calculator,school,price_calculator_url,string,,NPCURL,,,IPEDS,Yes,
+Predominant degree awarded (recoded 0s and 4s),school,degrees_awarded.predominant_recoded,integer,,SCH_DEG,,,IPEDS/NSLDS,,"Missing values, 0s, and 4s from PREDDEG recoded according to NSLDS program length"
+Schools that are on Heightened Cash Monitoring 2 by the Department of Education,school,under_investigation,integer,tinyint,HCM2,,,FSA,Yes,Flag (1=HCM2)
+Flag for main campus,school,main_campus,integer,tinyint,MAIN,0,Not main campus,IPEDS,,
+Number of branch campuses,school,branches,integer,tinyint,NUMBRANCH,,,IPEDS,,
+"Predominant undergraduate degree awarded
+ 0 Not classified
+ 1 Predominantly certificate-degree granting
+ 2 Predominantly associate's-degree granting
+ 3 Predominantly bachelor's-degree granting
+ 4 Entirely graduate-degree granting",school,degrees_awarded.predominant,integer,tinyint,PREDDEG,0,Not classified,IPEDS,Yes,
+"Highest degree awarded
+ 0 Non-degree-granting
+ 1 Certificate degree
+ 2 Associate degree
+ 3 Bachelor's degree
+ 4 Graduate degree",school,degrees_awarded.highest,integer,tinyint,HIGHDEG,0,Non-degree-granting,IPEDS,Yes,
+Control of institution (IPEDS),school,ownership,integer,integer,CONTROL,1,Public,IPEDS,Yes,
+FIPS code for state,school,state_fips,integer,integer,ST_FIPS,1,Alabama,IPEDS,,
+Region (IPEDS),school,region_id,integer,integer,REGION,0,U.S. Service Schools,IPEDS,,
+Locale of institution,school,locale,integer,integer,LOCALE,11,"City: Large (population of 250,000 or more)",IPEDS,Yes,
+Latitude,root,location.lat,float,,LATITUDE,,,IPEDS,,
+Longitude,root,location.lon,float,,LONGITUDE,,,IPEDS,,
+Carnegie Classification -- basic,school,carnegie_basic,integer,integer,CCBASIC,-2,Not applicable,IPEDS,,
+Carnegie Classification -- undergraduate profile,school,carnegie_undergrad,integer,,CCUGPROF,-2,Not applicable,IPEDS,,
+Carnegie Classification -- size and setting,school,carnegie_size_setting,integer,,CCSIZSET,-2,Not applicable,IPEDS,,
+Flag for Historically Black College and University,school,minority_serving.historically_black,integer,tinyint,HBCU,0,No,IPEDS,Yes,
+Flag for predominantly black institution,school,minority_serving.predominantly_black,integer,tinyint,PBI,0,No,OPE,Yes,
+Flag for Alaska Native Native Hawaiian serving institution,school,minority_serving.annh,integer,tinyint,ANNHI,0,No,OPE,Yes,
+Flag for tribal college and university,school,minority_serving.tribal,integer,tinyint,TRIBAL,0,No,OPE,Yes,
+Flag for Asian American Native American Pacific Islander-serving institution,school,minority_serving.aanipi,integer,tinyint,AANAPII,0,No,OPE,Yes,
+Flag for Hispanic-serving institution,school,minority_serving.hispanic,integer,tinyint,HSI,0,No,OPE,Yes,
+Flag for Native American non-tribal institution,school,minority_serving.nant,integer,tinyint,NANTI,0,No,OPE,Yes,
+Flag for men-only college,school,men_only,integer,tinyint,MENONLY,0,No,IPEDS,Yes,
+Flag for women-only college,school,women_only,integer,tinyint,WOMENONLY,0,No,IPEDS,Yes,
+"Percentage of degrees awarded in Agriculture, Agriculture Operations, And Related Sciences.",academics,program_percentage.agriculture,float,,PCIP01,,"Agriculture, Agriculture Operations, and Related Sciences",IPEDS,,
+Percentage of degrees awarded in Natural Resources And Conservation.,academics,program_percentage.resources,float,,PCIP03,,Natural Resources and Conservation,IPEDS,,
+Percentage of degrees awarded in Architecture And Related Services.,academics,program_percentage.architecture,float,,PCIP04,,Architecture and Related Services,IPEDS,,
+"Percentage of degrees awarded in Area, Ethnic, Cultural, Gender, And Group Studies.",academics,program_percentage.ethnic_cultural_gender,float,,PCIP05,,"Area, Ethnic, Cultural, Gender, and Group Studies",IPEDS,,
+"Percentage of degrees awarded in Communication, Journalism, And Related Programs.",academics,program_percentage.communication,float,,PCIP09,,"Communication, Journalism, and Related Programs",IPEDS,,
+Percentage of degrees awarded in Communications Technologies/Technicians And Support Services.,academics,program_percentage.communications_technology,float,,PCIP10,,Communications Technologies/Technicians and Support Services,IPEDS,,
+Percentage of degrees awarded in Computer And Information Sciences And Support Services.,academics,program_percentage.computer,float,,PCIP11,,Computer and Information Sciences and Support Services,IPEDS,,
+Percentage of degrees awarded in Personal And Culinary Services.,academics,program_percentage.personal_culinary,float,,PCIP12,,Personal and Culinary Services,IPEDS,,
+Percentage of degrees awarded in Education.,academics,program_percentage.education,float,,PCIP13,,Education,IPEDS,,
+Percentage of degrees awarded in Engineering.,academics,program_percentage.engineering,float,,PCIP14,,Engineering,IPEDS,,
+Percentage of degrees awarded in Engineering Technologies And Engineering-Related Fields.,academics,program_percentage.engineering_technology,float,,PCIP15,,Engineering Technologies and Engineering-Related Fields,IPEDS,,
+"Percentage of degrees awarded in Foreign Languages, Literatures, And Linguistics.",academics,program_percentage.language,float,,PCIP16,,"Foreign Languages, Literatures, and Linguistics",IPEDS,,
+Percentage of degrees awarded in Family And Consumer Sciences/Human Sciences.,academics,program_percentage.family_consumer_science,float,,PCIP19,,Family and Consumer Sciences/Human Sciences,IPEDS,,
+Percentage of degrees awarded in Legal Professions And Studies.,academics,program_percentage.legal,float,,PCIP22,,Legal Professions and Studies,IPEDS,,
+Percentage of degrees awarded in English Language And Literature/Letters.,academics,program_percentage.english,float,,PCIP23,,English Language and Literature/Letters,IPEDS,,
+"Percentage of degrees awarded in Liberal Arts And Sciences, General Studies And Humanities.",academics,program_percentage.humanities,float,,PCIP24,,"Liberal Arts and Sciences, General Studies and Humanities",IPEDS,,
+Percentage of degrees awarded in Library Science.,academics,program_percentage.library,float,,PCIP25,,Library Science,IPEDS,,
+Percentage of degrees awarded in Biological And Biomedical Sciences.,academics,program_percentage.biological,float,,PCIP26,,Biological and Biomedical Sciences,IPEDS,,
+Percentage of degrees awarded in Mathematics And Statistics.,academics,program_percentage.mathematics,float,,PCIP27,,Mathematics and Statistics,IPEDS,,
+Percentage of degrees awarded in Military Technologies And Applied Sciences.,academics,program_percentage.military,float,,PCIP29,,Military Technologies and Applied Sciences,IPEDS,,
+Percentage of degrees awarded in Multi/Interdisciplinary Studies.,academics,program_percentage.multidiscipline,float,,PCIP30,,Multi/Interdisciplinary Studies,IPEDS,,
+"Percentage of degrees awarded in Parks, Recreation, Leisure, And Fitness Studies.",academics,program_percentage.parks_recreation_fitness,float,,PCIP31,,"Parks, Recreation, Leisure, and Fitness Studies",IPEDS,,
+Percentage of degrees awarded in Philosophy And Religious Studies.,academics,program_percentage.philosophy_religious,float,,PCIP38,,Philosophy and Religious Studies,IPEDS,,
+Percentage of degrees awarded in Theology And Religious Vocations.,academics,program_percentage.theology_religious_vocation,float,,PCIP39,,Theology and Religious Vocations,IPEDS,,
+Percentage of degrees awarded in Physical Sciences.,academics,program_percentage.physical_science,float,,PCIP40,,Physical Sciences,IPEDS,,
+Percentage of degrees awarded in Science Technologies/Technicians.,academics,program_percentage.science_technology,float,,PCIP41,,Science Technologies/Technicians,IPEDS,,
+Percentage of degrees awarded in Psychology.,academics,program_percentage.psychology,float,,PCIP42,,Psychology,IPEDS,,
+"Percentage of degrees awarded in Homeland Security, Law Enforcement, Firefighting And Related Protective Services.",academics,program_percentage.security_law_enforcement,float,,PCIP43,,"Homeland Security, Law Enforcement, Firefighting and Related Protective Services",IPEDS,,
+Percentage of degrees awarded in Public Administration And Social Service Professions.,academics,program_percentage.public_administration_social_service,float,,PCIP44,,Public Administration and Social Service Professions,IPEDS,,
+Percentage of degrees awarded in Social Sciences.,academics,program_percentage.social_science,float,,PCIP45,,Social Sciences,IPEDS,,
+Percentage of degrees awarded in Construction Trades.,academics,program_percentage.construction,float,,PCIP46,,Construction Trades,IPEDS,,
+Percentage of degrees awarded in Mechanic And Repair Technologies/Technicians.,academics,program_percentage.mechanic_repair_technology,float,,PCIP47,,Mechanic and Repair Technologies/Technicians,IPEDS,,
+Percentage of degrees awarded in Precision Production.,academics,program_percentage.precision_production,float,,PCIP48,,Precision Production,IPEDS,,
+Percentage of degrees awarded in Transportation And Materials Moving.,academics,program_percentage.transportation,float,,PCIP49,,Transportation and Materials Moving,IPEDS,,
+Percentage of degrees awarded in Visual And Performing Arts.,academics,program_percentage.visual_performing,float,,PCIP50,,Visual and Performing Arts,IPEDS,,
+Percentage of degrees awarded in Health Professions And Related Programs.,academics,program_percentage.health,float,,PCIP51,,Health Professions and Related Programs,IPEDS,,
+"Percentage of degrees awarded in Business, Management, Marketing, And Related Support Services.",academics,program_percentage.business_marketing,float,,PCIP52,,"Business, Management, Marketing, and Related Support Services",IPEDS,,
+Percentage of degrees awarded in History.,academics,program_percentage.history,float,,PCIP54,,History,IPEDS,,
+"Certificate of less than one academic year in Agriculture, Agriculture Operations, And Related Sciences.",academics,program.certificate_lt_1_yr.agriculture,integer,,CIP01CERT1,0,Program not offered,IPEDS,,"Program designations at the 2-digit CIP level are aggregations of individual 6-digit CIP code offerings. If at least one 6-digit CIP code in the 2-digit group is offered (or is offered through an exclusively distance education modality), then the full 2-digit group is designated as offered (or offered through distance education). "
+"Certificate of at least one but less than two academic years in Agriculture, Agriculture Operations, And Related Sciences.",academics,program.certificate_lt_2_yr.agriculture,integer,,CIP01CERT2,1,Program offered,IPEDS,,ibid
+"Associate degree in Agriculture, Agriculture Operations, And Related Sciences.",academics,program.assoc.agriculture,integer,,CIP01ASSOC,2,Program offered through an exclusively distance-education program,IPEDS,,ibid
+"Award of at least two but less than four academic years in Agriculture, Agriculture Operations, And Related Sciences.",academics,program.certificate_lt_4_yr.agriculture,integer,,CIP01CERT4,,,IPEDS,,ibid
+"Bachelor's degree in Agriculture, Agriculture Operations, And Related Sciences.",academics,program.bachelors.agriculture,integer,,CIP01BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Natural Resources And Conservation.,academics,program.certificate_lt_1_yr.resources,integer,,CIP03CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Natural Resources And Conservation.,academics,program.certificate_lt_2_yr.resources,integer,,CIP03CERT2,,,IPEDS,,ibid
+Associate degree in Natural Resources And Conservation.,academics,program.assoc.resources,integer,,CIP03ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Natural Resources And Conservation.,academics,program.certificate_lt_4_yr.resources,integer,,CIP03CERT4,,,IPEDS,,ibid
+Bachelor's degree in Natural Resources And Conservation.,academics,program.bachelors.resources,integer,,CIP03BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Architecture And Related Services.,academics,program.certificate_lt_1_yr.architecture,integer,,CIP04CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Architecture And Related Services.,academics,program.certificate_lt_2_yr.architecture,integer,,CIP04CERT2,,,IPEDS,,ibid
+Associate degree in Architecture And Related Services.,academics,program.assoc.architecture,integer,,CIP04ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Architecture And Related Services.,academics,program.certificate_lt_4_yr.architecture,integer,,CIP04CERT4,,,IPEDS,,ibid
+Bachelor's degree in Architecture And Related Services.,academics,program.bachelors.architecture,integer,,CIP04BACHL,,,IPEDS,,ibid
+"Certificate of less than one academic year in Area, Ethnic, Cultural, Gender, And Group Studies.",academics,program.certificate_lt_1_yr.ethnic_cultural_gender,integer,,CIP05CERT1,,,IPEDS,,ibid
+"Certificate of at least one but less than two academic years in Area, Ethnic, Cultural, Gender, And Group Studies.",academics,program.certificate_lt_2_yr.ethnic_cultural_gender,integer,,CIP05CERT2,,,IPEDS,,ibid
+"Associate degree in Area, Ethnic, Cultural, Gender, And Group Studies.",academics,program.assoc.ethnic_cultural_gender,integer,,CIP05ASSOC,,,IPEDS,,ibid
+"Award of at least two but less than four academic years in Area, Ethnic, Cultural, Gender, And Group Studies.",academics,program.certificate_lt_4_yr.ethnic_cultural_gender,integer,,CIP05CERT4,,,IPEDS,,ibid
+"Bachelor's degree in Area, Ethnic, Cultural, Gender, And Group Studies.",academics,program.bachelors.ethnic_cultural_gender,integer,,CIP05BACHL,,,IPEDS,,ibid
+"Certificate of less than one academic year in Communication, Journalism, And Related Programs.",academics,program.certificate_lt_1_yr.communication,integer,,CIP09CERT1,,,IPEDS,,ibid
+"Certificate of at least one but less than two academic years in Communication, Journalism, And Related Programs.",academics,program.certificate_lt_2_yr.communication,integer,,CIP09CERT2,,,IPEDS,,ibid
+"Associate degree in Communication, Journalism, And Related Programs.",academics,program.assoc.communication,integer,,CIP09ASSOC,,,IPEDS,,ibid
+"Award of at least two but less than four academic years in Communication, Journalism, And Related Programs.",academics,program.certificate_lt_4_yr.communication,integer,,CIP09CERT4,,,IPEDS,,ibid
+"Bachelor's degree in Communication, Journalism, And Related Programs.",academics,program.bachelors.communication,integer,,CIP09BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Communications Technologies/Technicians And Support Services.,academics,program.certificate_lt_1_yr.communications_technology,integer,,CIP10CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Communications Technologies/Technicians And Support Services.,academics,program.certificate_lt_2_yr.communications_technology,integer,,CIP10CERT2,,,IPEDS,,ibid
+Associate degree in Communications Technologies/Technicians And Support Services.,academics,program.assoc.communications_technology,integer,,CIP10ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Communications Technologies/Technicians And Support Services.,academics,program.certificate_lt_4_yr.communications_technology,integer,,CIP10CERT4,,,IPEDS,,ibid
+Bachelor's degree in Communications Technologies/Technicians And Support Services.,academics,program.bachelors.communications_technology,integer,,CIP10BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Computer And Information Sciences And Support Services.,academics,program.certificate_lt_1_yr.computer,integer,,CIP11CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Computer And Information Sciences And Support Services.,academics,program.certificate_lt_2_yr.computer,integer,,CIP11CERT2,,,IPEDS,,ibid
+Associate degree in Computer And Information Sciences And Support Services.,academics,program.assoc.computer,integer,,CIP11ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Computer And Information Sciences And Support Services.,academics,program.certificate_lt_4_yr.computer,integer,,CIP11CERT4,,,IPEDS,,ibid
+Bachelor's degree in Computer And Information Sciences And Support Services.,academics,program.bachelors.computer,integer,,CIP11BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Personal And Culinary Services.,academics,program.certificate_lt_1_yr.personal_culinary,integer,,CIP12CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Personal And Culinary Services.,academics,program.certificate_lt_2_yr.personal_culinary,integer,,CIP12CERT2,,,IPEDS,,ibid
+Associate degree in Personal And Culinary Services.,academics,program.assoc.personal_culinary,integer,,CIP12ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Personal And Culinary Services.,academics,program.certificate_lt_4_yr.personal_culinary,integer,,CIP12CERT4,,,IPEDS,,ibid
+Bachelor's degree in Personal And Culinary Services.,academics,program.bachelors.personal_culinary,integer,,CIP12BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Education.,academics,program.certificate_lt_1_yr.education,integer,,CIP13CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Education.,academics,program.certificate_lt_2_yr.education,integer,,CIP13CERT2,,,IPEDS,,ibid
+Associate degree in Education.,academics,program.assoc.education,integer,,CIP13ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Education.,academics,program.certificate_lt_4_yr.education,integer,,CIP13CERT4,,,IPEDS,,ibid
+Bachelor's degree in Education.,academics,program.bachelors.education,integer,,CIP13BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Engineering.,academics,program.certificate_lt_1_yr.engineering,integer,,CIP14CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Engineering.,academics,program.certificate_lt_2_yr.engineering,integer,,CIP14CERT2,,,IPEDS,,ibid
+Associate degree in Engineering.,academics,program.assoc.engineering,integer,,CIP14ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Engineering.,academics,program.certificate_lt_4_yr.engineering,integer,,CIP14CERT4,,,IPEDS,,ibid
+Bachelor's degree in Engineering.,academics,program.bachelors.engineering,integer,,CIP14BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Engineering Technologies And Engineering-Related Fields.,academics,program.certificate_lt_1_yr.engineering_technology,integer,,CIP15CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Engineering Technologies And Engineering-Related Fields.,academics,program.certificate_lt_2_yr.engineering_technology,integer,,CIP15CERT2,,,IPEDS,,ibid
+Associate degree in Engineering Technologies And Engineering-Related Fields.,academics,program.assoc.engineering_technology,integer,,CIP15ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Engineering Technologies And Engineering-Related Fields.,academics,program.certificate_lt_4_yr.engineering_technology,integer,,CIP15CERT4,,,IPEDS,,ibid
+Bachelor's degree in Engineering Technologies And Engineering-Related Fields.,academics,program.bachelors.engineering_technology,integer,,CIP15BACHL,,,IPEDS,,ibid
+"Certificate of less than one academic year in Foreign Languages, Literatures, And Linguistics.",academics,program.certificate_lt_1_yr.language,integer,,CIP16CERT1,,,IPEDS,,ibid
+"Certificate of at least one but less than two academic years in Foreign Languages, Literatures, And Linguistics.",academics,program.certificate_lt_2_yr.language,integer,,CIP16CERT2,,,IPEDS,,ibid
+"Associate degree in Foreign Languages, Literatures, And Linguistics.",academics,program.assoc.language,integer,,CIP16ASSOC,,,IPEDS,,ibid
+"Award of at least two but less than four academic years in Foreign Languages, Literatures, And Linguistics.",academics,program.certificate_lt_4_yr.language,integer,,CIP16CERT4,,,IPEDS,,ibid
+"Bachelor's degree in Foreign Languages, Literatures, And Linguistics.",academics,program.bachelors.language,integer,,CIP16BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Family And Consumer Sciences/Human Sciences.,academics,program.certificate_lt_1_yr.family_consumer_science,integer,,CIP19CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Family And Consumer Sciences/Human Sciences.,academics,program.certificate_lt_2_yr.family_consumer_science,integer,,CIP19CERT2,,,IPEDS,,ibid
+Associate degree in Family And Consumer Sciences/Human Sciences.,academics,program.assoc.family_consumer_science,integer,,CIP19ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Family And Consumer Sciences/Human Sciences.,academics,program.certificate_lt_4_yr.family_consumer_science,integer,,CIP19CERT4,,,IPEDS,,ibid
+Bachelor's degree in Family And Consumer Sciences/Human Sciences.,academics,program.bachelors.family_consumer_science,integer,,CIP19BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Legal Professions And Studies.,academics,program.certificate_lt_1_yr.legal,integer,,CIP22CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Legal Professions And Studies.,academics,program.certificate_lt_2_yr.legal,integer,,CIP22CERT2,,,IPEDS,,ibid
+Associate degree in Legal Professions And Studies.,academics,program.assoc.legal,integer,,CIP22ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Legal Professions And Studies.,academics,program.certificate_lt_4_yr.legal,integer,,CIP22CERT4,,,IPEDS,,ibid
+Bachelor's degree in Legal Professions And Studies.,academics,program.bachelors.legal,integer,,CIP22BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in English Language And Literature/Letters.,academics,program.certificate_lt_1_yr.english,integer,,CIP23CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in English Language And Literature/Letters.,academics,program.certificate_lt_2_yr.english,integer,,CIP23CERT2,,,IPEDS,,ibid
+Associate degree in English Language And Literature/Letters.,academics,program.assoc.english,integer,,CIP23ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in English Language And Literature/Letters.,academics,program.certificate_lt_4_yr.english,integer,,CIP23CERT4,,,IPEDS,,ibid
+Bachelor's degree in English Language And Literature/Letters.,academics,program.bachelors.english,integer,,CIP23BACHL,,,IPEDS,,ibid
+"Certificate of less than one academic year in Liberal Arts And Sciences, General Studies And Humanities.",academics,program.certificate_lt_1_yr.humanities,integer,,CIP24CERT1,,,IPEDS,,ibid
+"Certificate of at least one but less than two academic years in Liberal Arts And Sciences, General Studies And Humanities.",academics,program.certificate_lt_2_yr.humanities,integer,,CIP24CERT2,,,IPEDS,,ibid
+"Associate degree in Liberal Arts And Sciences, General Studies And Humanities.",academics,program.assoc.humanities,integer,,CIP24ASSOC,,,IPEDS,,ibid
+"Award of at least two but less than four academic years in Liberal Arts And Sciences, General Studies And Humanities.",academics,program.certificate_lt_4_yr.humanities,integer,,CIP24CERT4,,,IPEDS,,ibid
+"Bachelor's degree in Liberal Arts And Sciences, General Studies And Humanities.",academics,program.bachelors.humanities,integer,,CIP24BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Library Science.,academics,program.certificate_lt_1_yr.library,integer,,CIP25CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Library Science.,academics,program.certificate_lt_2_yr.library,integer,,CIP25CERT2,,,IPEDS,,ibid
+Associate degree in Library Science.,academics,program.assoc.library,integer,,CIP25ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Library Science.,academics,program.certificate_lt_4_yr.library,integer,,CIP25CERT4,,,IPEDS,,ibid
+Bachelor's degree in Library Science.,academics,program.bachelors.library,integer,,CIP25BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Biological And Biomedical Sciences.,academics,program.certificate_lt_1_yr.biological,integer,,CIP26CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Biological And Biomedical Sciences.,academics,program.certificate_lt_2_yr.biological,integer,,CIP26CERT2,,,IPEDS,,ibid
+Associate degree in Biological And Biomedical Sciences.,academics,program.assoc.biological,integer,,CIP26ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Biological And Biomedical Sciences.,academics,program.certificate_lt_4_yr.biological,integer,,CIP26CERT4,,,IPEDS,,ibid
+Bachelor's degree in Biological And Biomedical Sciences.,academics,program.bachelors.biological,integer,,CIP26BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Mathematics And Statistics.,academics,program.certificate_lt_1_yr.mathematics,integer,,CIP27CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Mathematics And Statistics.,academics,program.certificate_lt_2_yr.mathematics,integer,,CIP27CERT2,,,IPEDS,,ibid
+Associate degree in Mathematics And Statistics.,academics,program.assoc.mathematics,integer,,CIP27ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Mathematics And Statistics.,academics,program.certificate_lt_4_yr.mathematics,integer,,CIP27CERT4,,,IPEDS,,ibid
+Bachelor's degree in Mathematics And Statistics.,academics,program.bachelors.mathematics,integer,,CIP27BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Military Technologies And Applied Sciences.,academics,program.certificate_lt_1_yr.military,integer,,CIP29CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Military Technologies And Applied Sciences.,academics,program.certificate_lt_2_yr.military,integer,,CIP29CERT2,,,IPEDS,,ibid
+Associate degree in Military Technologies And Applied Sciences.,academics,program.assoc.military,integer,,CIP29ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Military Technologies And Applied Sciences.,academics,program.certificate_lt_4_yr.military,integer,,CIP29CERT4,,,IPEDS,,ibid
+Bachelor's degree in Military Technologies And Applied Sciences.,academics,program.bachelors.military,integer,,CIP29BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Multi/Interdisciplinary Studies.,academics,program.certificate_lt_1_yr.multidiscipline,integer,,CIP30CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Multi/Interdisciplinary Studies.,academics,program.certificate_lt_2_yr.multidiscipline,integer,,CIP30CERT2,,,IPEDS,,ibid
+Associate degree in Multi/Interdisciplinary Studies.,academics,program.assoc.multidiscipline,integer,,CIP30ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Multi/Interdisciplinary Studies.,academics,program.certificate_lt_4_yr.multidiscipline,integer,,CIP30CERT4,,,IPEDS,,ibid
+Bachelor's degree in Multi/Interdisciplinary Studies.,academics,program.bachelors.multidiscipline,integer,,CIP30BACHL,,,IPEDS,,ibid
+"Certificate of less than one academic year in Parks, Recreation, Leisure, And Fitness Studies.",academics,program.certificate_lt_1_yr.parks_recreation_fitness,integer,,CIP31CERT1,,,IPEDS,,ibid
+"Certificate of at least one but less than two academic years in Parks, Recreation, Leisure, And Fitness Studies.",academics,program.certificate_lt_2_yr.parks_recreation_fitness,integer,,CIP31CERT2,,,IPEDS,,ibid
+"Associate degree in Parks, Recreation, Leisure, And Fitness Studies.",academics,program.assoc.parks_recreation_fitness,integer,,CIP31ASSOC,,,IPEDS,,ibid
+"Award of at least two but less than four academic years in Parks, Recreation, Leisure, And Fitness Studies.",academics,program.certificate_lt_4_yr.parks_recreation_fitness,integer,,CIP31CERT4,,,IPEDS,,ibid
+"Bachelor's degree in Parks, Recreation, Leisure, And Fitness Studies.",academics,program.bachelors.parks_recreation_fitness,integer,,CIP31BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Philosophy And Religious Studies.,academics,program.certificate_lt_1_yr.philosophy_religious,integer,,CIP38CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Philosophy And Religious Studies.,academics,program.certificate_lt_2_yr.philosophy_religious,integer,,CIP38CERT2,,,IPEDS,,ibid
+Associate degree in Philosophy And Religious Studies.,academics,program.assoc.philosophy_religious,integer,,CIP38ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Philosophy And Religious Studies.,academics,program.certificate_lt_4_yr.philosophy_religious,integer,,CIP38CERT4,,,IPEDS,,ibid
+Bachelor's degree in Philosophy And Religious Studies.,academics,program.bachelors.philosophy_religious,integer,,CIP38BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Theology And Religious Vocations.,academics,program.certificate_lt_1_yr.theology_religious_vocation,integer,,CIP39CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Theology And Religious Vocations.,academics,program.certificate_lt_2_yr.theology_religious_vocation,integer,,CIP39CERT2,,,IPEDS,,ibid
+Associate degree in Theology And Religious Vocations.,academics,program.assoc.theology_religious_vocation,integer,,CIP39ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Theology And Religious Vocations.,academics,program.certificate_lt_4_yr.theology_religious_vocation,integer,,CIP39CERT4,,,IPEDS,,ibid
+Bachelor's degree in Theology And Religious Vocations.,academics,program.bachelors.theology_religious_vocation,integer,,CIP39BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Physical Sciences.,academics,program.certificate_lt_1_yr.physical_science,integer,,CIP40CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Physical Sciences.,academics,program.certificate_lt_2_yr.physical_science,integer,,CIP40CERT2,,,IPEDS,,ibid
+Associate degree in Physical Sciences.,academics,program.assoc.physical_science,integer,,CIP40ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Physical Sciences.,academics,program.certificate_lt_4_yr.physical_science,integer,,CIP40CERT4,,,IPEDS,,ibid
+Bachelor's degree in Physical Sciences.,academics,program.bachelors.physical_science,integer,,CIP40BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Science Technologies/Technicians.,academics,program.certificate_lt_1_yr.science_technology,integer,,CIP41CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Science Technologies/Technicians.,academics,program.certificate_lt_2_yr.science_technology,integer,,CIP41CERT2,,,IPEDS,,ibid
+Associate degree in Science Technologies/Technicians.,academics,program.assoc.science_technology,integer,,CIP41ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Science Technologies/Technicians.,academics,program.certificate_lt_4_yr.science_technology,integer,,CIP41CERT4,,,IPEDS,,ibid
+Bachelor's degree in Science Technologies/Technicians.,academics,program.bachelors.science_technology,integer,,CIP41BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Psychology.,academics,program.certificate_lt_1_yr.psychology,integer,,CIP42CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Psychology.,academics,program.certificate_lt_2_yr.psychology,integer,,CIP42CERT2,,,IPEDS,,ibid
+Associate degree in Psychology.,academics,program.assoc.psychology,integer,,CIP42ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Psychology.,academics,program.certificate_lt_4_yr.psychology,integer,,CIP42CERT4,,,IPEDS,,ibid
+Bachelor's degree in Psychology.,academics,program.bachelors.psychology,integer,,CIP42BACHL,,,IPEDS,,ibid
+"Certificate of less than one academic year in Homeland Security, Law Enforcement, Firefighting And Related Protective Services.",academics,program.certificate_lt_1_yr.security_law_enforcement,integer,,CIP43CERT1,,,IPEDS,,ibid
+"Certificate of at least one but less than two academic years in Homeland Security, Law Enforcement, Firefighting And Related Protective Services.",academics,program.certificate_lt_2_yr.security_law_enforcement,integer,,CIP43CERT2,,,IPEDS,,ibid
+"Associate degree in Homeland Security, Law Enforcement, Firefighting And Related Protective Services.",academics,program.assoc.security_law_enforcement,integer,,CIP43ASSOC,,,IPEDS,,ibid
+"Award of at least two but less than four academic years in Homeland Security, Law Enforcement, Firefighting And Related Protective Services.",academics,program.certificate_lt_4_yr.security_law_enforcement,integer,,CIP43CERT4,,,IPEDS,,ibid
+"Bachelor's degree in Homeland Security, Law Enforcement, Firefighting And Related Protective Services.",academics,program.bachelors.security_law_enforcement,integer,,CIP43BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Public Administration And Social Service Professions.,academics,program.certificate_lt_1_yr.public_administration_social_service,integer,,CIP44CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Public Administration And Social Service Professions.,academics,program.certificate_lt_2_yr.public_administration_social_service,integer,,CIP44CERT2,,,IPEDS,,ibid
+Associate degree in Public Administration And Social Service Professions.,academics,program.assoc.public_administration_social_service,integer,,CIP44ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Public Administration And Social Service Professions.,academics,program.certificate_lt_4_yr.public_administration_social_service,integer,,CIP44CERT4,,,IPEDS,,ibid
+Bachelor's degree in Public Administration And Social Service Professions.,academics,program.bachelors.public_administration_social_service,integer,,CIP44BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Social Sciences.,academics,program.certificate_lt_1_yr.social_science,integer,,CIP45CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Social Sciences.,academics,program.certificate_lt_2_yr.social_science,integer,,CIP45CERT2,,,IPEDS,,ibid
+Associate degree in Social Sciences.,academics,program.assoc.social_science,integer,,CIP45ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Social Sciences.,academics,program.certificate_lt_4_yr.social_science,integer,,CIP45CERT4,,,IPEDS,,ibid
+Bachelor's degree in Social Sciences.,academics,program.bachelors.social_science,integer,,CIP45BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Construction Trades.,academics,program.certificate_lt_1_yr.construction,integer,,CIP46CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Construction Trades.,academics,program.certificate_lt_2_yr.construction,integer,,CIP46CERT2,,,IPEDS,,ibid
+Associate degree in Construction Trades.,academics,program.assoc.construction,integer,,CIP46ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Construction Trades.,academics,program.certificate_lt_4_yr.construction,integer,,CIP46CERT4,,,IPEDS,,ibid
+Bachelor's degree in Construction Trades.,academics,program.bachelors.construction,integer,,CIP46BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Mechanic And Repair Technologies/Technicians.,academics,program.certificate_lt_1_yr.mechanic_repair_technology,integer,,CIP47CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Mechanic And Repair Technologies/Technicians.,academics,program.certificate_lt_2_yr.mechanic_repair_technology,integer,,CIP47CERT2,,,IPEDS,,ibid
+Associate degree in Mechanic And Repair Technologies/Technicians.,academics,program.assoc.mechanic_repair_technology,integer,,CIP47ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Mechanic And Repair Technologies/Technicians.,academics,program.certificate_lt_4_yr.mechanic_repair_technology,integer,,CIP47CERT4,,,IPEDS,,ibid
+Bachelor's degree in Mechanic And Repair Technologies/Technicians.,academics,program.bachelors.mechanic_repair_technology,integer,,CIP47BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Precision Production.,academics,program.certificate_lt_1_yr.precision_production,integer,,CIP48CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Precision Production.,academics,program.certificate_lt_2_yr.precision_production,integer,,CIP48CERT2,,,IPEDS,,ibid
+Associate degree in Precision Production.,academics,program.assoc.precision_production,integer,,CIP48ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Precision Production.,academics,program.certificate_lt_4_yr.precision_production,integer,,CIP48CERT4,,,IPEDS,,ibid
+Bachelor's degree in Precision Production.,academics,program.bachelors.precision_production,integer,,CIP48BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Transportation And Materials Moving.,academics,program.certificate_lt_1_yr.transportation,integer,,CIP49CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Transportation And Materials Moving.,academics,program.certificate_lt_2_yr.transportation,integer,,CIP49CERT2,,,IPEDS,,ibid
+Associate degree in Transportation And Materials Moving.,academics,program.assoc.transportation,integer,,CIP49ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Transportation And Materials Moving.,academics,program.certificate_lt_4_yr.transportation,integer,,CIP49CERT4,,,IPEDS,,ibid
+Bachelor's degree in Transportation And Materials Moving.,academics,program.bachelors.transportation,integer,,CIP49BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Visual And Performing Arts.,academics,program.certificate_lt_1_yr.visual_performing,integer,,CIP50CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Visual And Performing Arts.,academics,program.certificate_lt_2_yr.visual_performing,integer,,CIP50CERT2,,,IPEDS,,ibid
+Associate degree in Visual And Performing Arts.,academics,program.assoc.visual_performing,integer,,CIP50ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Visual And Performing Arts.,academics,program.certificate_lt_4_yr.visual_performing,integer,,CIP50CERT4,,,IPEDS,,ibid
+Bachelor's degree in Visual And Performing Arts.,academics,program.bachelors.visual_performing,integer,,CIP50BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in Health Professions And Related Programs.,academics,program.certificate_lt_1_yr.health,integer,,CIP51CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in Health Professions And Related Programs.,academics,program.certificate_lt_2_yr.health,integer,,CIP51CERT2,,,IPEDS,,ibid
+Associate degree in Health Professions And Related Programs.,academics,program.assoc.health,integer,,CIP51ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in Health Professions And Related Programs.,academics,program.certificate_lt_4_yr.health,integer,,CIP51CERT4,,,IPEDS,,ibid
+Bachelor's degree in Health Professions And Related Programs.,academics,program.bachelors.health,integer,,CIP51BACHL,,,IPEDS,,ibid
+"Certificate of less than one academic year in Business, Management, Marketing, And Related Support Services.",academics,program.certificate_lt_1_yr.business_marketing,integer,,CIP52CERT1,,,IPEDS,,ibid
+"Certificate of at least one but less than two academic years in Business, Management, Marketing, And Related Support Services.",academics,program.certificate_lt_2_yr.business_marketing,integer,,CIP52CERT2,,,IPEDS,,ibid
+"Associate degree in Business, Management, Marketing, And Related Support Services.",academics,program.assoc.business_marketing,integer,,CIP52ASSOC,,,IPEDS,,ibid
+"Award of at least two but less than four academic years in Business, Management, Marketing, And Related Support Services.",academics,program.certificate_lt_4_yr.business_marketing,integer,,CIP52CERT4,,,IPEDS,,ibid
+"Bachelor's degree in Business, Management, Marketing, And Related Support Services.",academics,program.bachelors.business_marketing,integer,,CIP52BACHL,,,IPEDS,,ibid
+Certificate of less than one academic year in History.,academics,program.certificate_lt_1_yr.history,integer,,CIP54CERT1,,,IPEDS,,ibid
+Certificate of at least one but less than two academic years in History.,academics,program.certificate_lt_2_yr.history,integer,,CIP54CERT2,,,IPEDS,,ibid
+Associate degree in History.,academics,program.assoc.history,integer,,CIP54ASSOC,,,IPEDS,,ibid
+Award of at least two but less than four academic years in History.,academics,program.certificate_lt_4_yr.history,integer,,CIP54CERT4,,,IPEDS,,ibid
+Bachelor's degree in History.,academics,program.bachelors.history,integer,,CIP54BACHL,,,IPEDS,,ibid
+Flag for distance-education-only education,school,online_only,integer,,DISTANCEONLY,0,Not distance-education only,IPEDS,Yes,
+Enrollment of undergraduate certificate/degree-seeking students,student,size,integer,integer,UGDS,,,IPEDS,Yes,Not available in 2000-2001 datafile
+Total share of enrollment of undergraduate degree-seeking students who are white,student,demographics.race_ethnicity.white,float,,UGDS_WHITE,,,IPEDS,Yes,Not available in all datafiles due to changing race/ethnicity category definitions over time. See data_cohort_map
+Total share of enrollment of undergraduate degree-seeking students who are black,student,demographics.race_ethnicity.black,float,,UGDS_BLACK,,,IPEDS,Yes,Not available in all datafiles due to changing race/ethnicity category definitions over time. See data_cohort_map
+Total share of enrollment of undergraduate degree-seeking students who are Hispanic,student,demographics.race_ethnicity.hispanic,float,,UGDS_HISP,,,IPEDS,Yes,Not available in all datafiles due to changing race/ethnicity category definitions over time. See data_cohort_map
+Total share of enrollment of undergraduate degree-seeking students who are Asian,student,demographics.race_ethnicity.asian,float,,UGDS_ASIAN,,,IPEDS,Yes,Not available in all datafiles due to changing race/ethnicity category definitions over time. See data_cohort_map
+Total share of enrollment of undergraduate degree-seeking students who are American Indian/Alaska Native,student,demographics.race_ethnicity.aian,float,,UGDS_AIAN,,,IPEDS,Yes,Not available in all datafiles due to changing race/ethnicity category definitions over time. See data_cohort_map
+Total share of enrollment of undergraduate degree-seeking students who are Native Hawaiian/Pacific Islander,student,demographics.race_ethnicity.nhpi,float,,UGDS_NHPI,,,IPEDS,Yes,Not available in all datafiles due to changing race/ethnicity category definitions over time. See data_cohort_map
+Total share of enrollment of undergraduate degree-seeking students who are two or more races,student,demographics.race_ethnicity.two_or_more,float,,UGDS_2MOR,,,IPEDS,Yes,Not available in all datafiles due to changing race/ethnicity category definitions over time. See data_cohort_map
+Total share of enrollment of undergraduate degree-seeking students who are non-resident aliens,student,demographics.race_ethnicity.non_resident_alien,float,,UGDS_NRA,,,IPEDS,Yes,Not available in all datafiles due to changing race/ethnicity category definitions over time. See data_cohort_map
+Total share of enrollment of undergraduate degree-seeking students whose race is unknown,student,demographics.race_ethnicity.unknown,float,,UGDS_UNKN,,,IPEDS,Yes,Not available in all datafiles due to changing race/ethnicity category definitions over time. See data_cohort_map
+"Share of undergraduate, degree-/certificate-seeking students who are part-time",student,part_time_share,float,,PPTUG_EF,,,IPEDS,Yes,"The proportion of degree/certificate-seeking undergraduates enrolled part time in the fall term, calculated from the IPEDS Fall Enrollment component. This metric does not apply during 2000-01, when degree/certificate-seeking status was not collected. It is calculated as the number of part-time, degree/certificate-seeking undergraduates divided by the total number of degree/certificate-seeking undergraduates. It includes non-first-time undergraduates. Proportions are expressed as decimals rounded to four decimal places, so, for example, 0.1234 equals 12.34 percent."
+"Flag for currently operating institution, 0=closed, 1=operating",school,operating,integer,tinyint,CURROPER,0,Not currently certified as an operating institution,FSA,Yes,
+Net tuition revenue per full-time equivalent student,school,tuition_revenue_per_fte,integer,,TUITFTE,,,IPEDS,,Net tuition revenue (tuition revenue minus discounts and allowances) divided by the number of FTE students (undergraduates and graduate students) (http://nces.ed.gov/ipeds/glossary/index.asp?id=854). Net tuition revenue is included in the IPEDS Finance component and FTE enrollment is included in the IPEDS 12-Month Enrollment component. This metric includes graduate students.
+Instructional expenditures per full-time equivalent student,school,instructional_expenditure_per_fte,integer,,INEXPFTE,,,IPEDS,,Instructional expenditures divided by the number of FTE students (undergraduates and graduate students) (http://nces.ed.gov/ipeds/glossary/index.asp?id=854). Instructional expenditures are included in the IPEDS Finance component and FTE enrollment is included in the IPEDS 12-Month Enrollment component. This metric includes graduate students.
+Percentage of undergraduates who receive a Pell Grant,aid,pell_grant_rate,float,,PCTPELL,,,IPEDS,,"The proportion of undergraduates who received a Pell grant in the academic year, calculated from the IPEDS Student Financial Aid component. This metric is calculated by IPEDS as the quotient of the number of Pell grant recipients divided by the count of all undergraduates for either a fall enrollment cohort (for institutions that primarily follow an academic year calendar system) or a full-year enrollment cohort (for institutions that primarily follow a continuous enrollment or program-based calendar system). Proportions are expressed as decimals rounded to four decimal places, so, for example, 0.1234 equals 12.34 percent. This metric is not available prior to the 2008-09 academic year."
+Years used for rolling averages of completion rate C150_[4/L4]_POOLED and transfer rate TRANS_[4/L4]_POOLED,completion,pooled_yrs_used,integer,,POOLYRS,,,IPEDS,,
+"Share of entering undergraduate students who are first-time, full-time degree-/certificate-seeking undergraduate students",student,share_first.time_full.time,float,,PFTFTUG1_EF,,,IPEDS,,Available in 2006-07 and later data files
+Percent of all undergraduate students receiving a federal student loan,aid,federal_loan_rate,float,,PCTFLOAN,,,IPEDS,,"The proportion of undergraduates who received a federal loan in the academic year, calculated from values from the IPEDS Student Financial Aid component. Proportions are expressed as decimals rounded to four decimal places, so, for example, 0.1234 equals 12.34 percent. This metric is not available prior to the 2009-10 academic year."
+Percentage of undergraduates aged 25 and above,student,share_25_older,float,,UG25ABV,,,IPEDS,,The proportion of undergraduates who are aged 25 or older
+Two-year cohort default rate,repayment,2_yr_default_rate,float,,CDR2,,,FSA,,"Discontinued; A 2-year cohort default rate is the percentage of a school's borrowers who enter repayment on certain Federal Family Education Loan (FFEL) Program or William D. Ford Federal Direct Loan (Direct Loan) Program loans during a particular federal fiscal year (FY), October 1 to September 30, and default or meet other specified conditions prior to the end of the first following fiscal year. Please refer to the Cohort Default Rate Guide for a more in-depth description of cohort default rates and how the rates are calculated."
+Three-year cohort default rate,repayment,3_yr_default_rate,float,,CDR3,,,FSA,,"A 3-year cohort default rate is the percentage of a school's borrowers who enter repayment on certain Federal Family Education Loan (FFEL) Program or William D. Ford Federal Direct Loan (Direct Loan) Program loans during a particular federal fiscal year (FY), October 1 to September 30, and default or meet other specified conditions prior to the end of the second following fiscal year. Please refer to the Cohort Default Rate Guide for a more in-depth description of cohort default rates and how the rates are calculated."
+"Percentage of aided students whose family income is between $0-$30,000",student,share_lowincome.0_30000,float,,INC_PCT_LO,,,NSLDS,,Discontinued
+Percentage of students who are financially independent,student,share_independent_students,float,,DEP_STAT_PCT_IND,,,NSLDS,,Discontinued
+Percentage first-generation students,student,share_firstgeneration,float,,PAR_ED_PCT_1STGEN,,,NSLDS,,Discontinued
+Percent of students whose parents' highest educational level was is some form of postsecondary education,student,share_firstgeneration_parents.somecollege,float,,PAR_ED_PCT_PS,,,NSLDS,,Discontinued
+Average family income of dependent students in real 2015 dollars.,student,avg_dependent_income.2014dollars,integer,,DEP_INC_AVG,,,NSLDS,,Discontinued
+Average family income of independent students in real 2015 dollars.,student,avg_independent_income.2014dollars,integer,,IND_INC_AVG,,,NSLDS,,Discontinued
+Number of students in overall 2-year completion cohort,completion,2_yr_completion.overall,integer,,OVERALL_YR2_N,,,NSLDS,,
+"Number of low-income (less than $30,000 in nominal family income) students in overall 2-year completion cohort",completion,2_yr_completion.low_income,integer,,LO_INC_YR2_N,,,NSLDS,,
+Number of students in overall 3-year completion cohort,completion,3_yr_completion.overall,integer,,OVERALL_YR3_N,,,NSLDS,,
+"Number of low-income (less than $30,000 in nominal family income) students in overall 3-year completion cohort",completion,3_yr_completion.low_income,integer,,LO_INC_YR3_N,,,NSLDS,,
+Number of students in overall 4-year completion cohort,completion,4_yr_completion.overall,integer,,OVERALL_YR4_N,,,NSLDS,,
+"Number of low-income (less than $30,000 in nominal family income) students in overall 4-year completion cohort",completion,4_yr_completion.low_income,integer,,LO_INC_YR4_N,,,NSLDS,,
+Number of students in overall 6-year completion cohort,completion,6_yr_completion.overall,integer,,OVERALL_YR6_N,,,NSLDS,,
+Number of students in overall 8-year completion cohort,completion,8_yr_completion.overall,integer,,OVERALL_YR8_N,,,NSLDS,,
+The median original amount of the loan principal upon entering repayment,aid,loan_principal,float,,DEBT_MDN,,,NSLDS,,
+The number of students in the median debt cohort,aid,median_debt.number.overall,integer,,DEBT_N,,,NSLDS,,
+Number of students in the cumulative loan debt cohort,aid,cumulative_debt.number,integer,,CUML_DEBT_N,,,NSLDS,,Discontinued
+Number of students in the family income cohort,student,family_income.overall,integer,,INC_N,,,NSLDS,,Discontinued; data element describes the earnings cohort (without exclusions for military and in-school deferments in the measurement year)
+Number of students in the family income dependent students cohort,student,family_income.dependent_students,integer,,DEP_INC_N,,,NSLDS,,Discontinued; data element describes the earnings cohort (without exclusions for military and in-school deferments in the measurement year)
+Number of students in the family income independent students cohort,student,family_income.independent_students,integer,,IND_INC_N,,,NSLDS,,Discontinued; data element describes the earnings cohort (without exclusions for military and in-school deferments in the measurement year)
+Number of students in the disaggregation with valid dependency status,student,valid_dependency_status,integer,,DEP_STAT_N,,,NSLDS,,Discontinued; data element describes the earnings cohort (without exclusions for military and in-school deferments in the measurement year)
+Number of students in the parents' education level cohort,student,parents_education_level,integer,,PAR_ED_N,,,NSLDS,,Discontinued; data element describes the earnings cohort (without exclusions for military and in-school deferments in the measurement year)
+Number of students in the FAFSA applications cohort,student,FAFSA_applications,integer,,APPL_SCH_N,,,NSLDS,,Discontinued; data element describes the earnings cohort (without exclusions for military and in-school deferments in the measurement year)
+Average age of entry,student,demographics.age_entry,integer,,AGE_ENTRY,,,Treasury,,Discontinued; data element describes the earnings cohort (without exclusions for military and in-school deferments in the measurement year)
+Share of dependent students,student,demographics.dependent,float,,DEPENDENT,,,NSLDS,,Discontinued; data element describes the earnings cohort (without exclusions for military and in-school deferments in the measurement year)
+Share of first-generation students,student,demographics.first_generation,float,,FIRST_GEN,,,NSLDS,,Discontinued; data element describes the earnings cohort (without exclusions for military and in-school deferments in the measurement year)
+Average family income,student,demographics.avg_family_income,integer,,FAMINC,,,NSLDS,,Discontinued; data element describes the earnings cohort (without exclusions for military and in-school deferments in the measurement year)
+Median family income,student,demographics.median_family_income,integer,,MD_FAMINC,,,NSLDS,,Discontinued; data element describes the earnings cohort (without exclusions for military and in-school deferments in the measurement year)
+Average family income for independent students ,student,demographics.avg_family_income_independents,integer,,FAMINC_IND,,,NSLDS,,Discontinued; data element describes the earnings cohort (without exclusions for military and in-school deferments in the measurement year)
+Number of students not working and not enrolled 10 years after entry,earnings,10_yrs_after_entry.not_working_not_enrolled.overall,integer,,COUNT_NWNE_P10,,,Treasury,,
+Number of students not working and not enrolled 6 years after entry,earnings,6_yrs_after_entry.not_working_not_enrolled.overall,integer,,COUNT_NWNE_P6,,,Treasury,,
+Number of students working and not enrolled 6 years after entry,earnings,6_yrs_after_entry.working_not_enrolled.overall,integer,,COUNT_WNE_P6,,,Treasury,,
+Median earnings of students working and not enrolled 6 years after entry,earnings,6_yrs_after_entry.median,integer,,MD_EARN_WNE_P6,,,Treasury,,
+25th percentile of earnings of students working and not enrolled 6 years after entry,earnings,6_yrs_after_entry.working_not_enrolled.earnings_percentile.25,integer,,PCT25_EARN_WNE_P6,,,Treasury,,
+75th percentile of earnings of students working and not enrolled 6 years after entry,earnings,6_yrs_after_entry.working_not_enrolled.earnings_percentile.75,integer,,PCT75_EARN_WNE_P6,,,Treasury,,
+"Number of students working and not enrolled 6 years after entry in the lowest income tercile $0-$30,000",earnings,6_yrs_after_entry.working_not_enrolled.income.lowest_tercile,integer,,COUNT_WNE_INC1_P6,,,Treasury,,
+Number of female students working and not enrolled 6 years after entry,earnings,6_yrs_after_entry.female_students,integer,,COUNT_WNE_MALE0_P6,,,Treasury,,
+Number of students not working and not enrolled 8 years after entry,earnings,8_yrs_after_entry.not_working_not_enrolled,integer,,COUNT_NWNE_P8,,,Treasury,,
+Number of students working and not enrolled 8 years after entry,earnings,8_yrs_after_entry.working_not_enrolled,integer,,COUNT_WNE_P8,,,Treasury,,
+Median earnings of students working and not enrolled 8 years after entry,earnings,8_yrs_after_entry.median_earnings,float,,MD_EARN_WNE_P8,,,Treasury,,
+25th percentile of earnings of students working and not enrolled 8 years after entry,earnings,8_yrs_after_entry.25th_percentile_earnings,integer,,PCT25_EARN_WNE_P8,,,Treasury,,
+75th percentile of earnings of students working and not enrolled 8 years after entry,earnings,8_yrs_after_entry.75th_percentile_earnings,integer,,PCT75_EARN_WNE_P8,,,Treasury,,
+"Median debt, suppressed for n=30",aid,median_debt_suppressed.overall,float,,DEBT_MDN_SUPP,,,NSLDS,,
+Level of institution,school,institutional_characteristics.level,integer,,ICLEVEL,1,4-year,IPEDS,,
+Total share of enrollment of undergraduate degree-seeking students who are men,student,demographics.men,float,,UGDS_MEN,,,IPEDS,,
+Total share of enrollment of undergraduate degree-seeking students who are women,student,demographics.women,float,,UGDS_WOMEN,,,IPEDS,,
+Number of students in the cohort for the two-year cohort default rate,repayment,2_yr_default_rate_denom,integer,,CDR2_DENOM,,,FSA,,Discontinued
+Number of students in the cohort for the three-year cohort default rate,repayment,3_yr_default_rate_denom,integer,,CDR3_DENOM,,,FSA,,
+Open admissions policy indicator,school,open_admissions_policy,integer,,OPENADMP,1,Yes,IPEDS,,
+Number of undergraduate students (denominator percent receiving a pell grant or federal student loan),student,undergrads_with_pell_grant_or_federal_student_loan,integer,,D_PCTPELL_PCTFLOAN,,,IPEDS,,
+Code corresponding to accreditor (as captured from PEPS),school,accreditor_code,string,,ACCREDCODE,,,FSA,,
+Date that institution was first approved to participate in Title IV aid programs,school,title_iv.approval_date,string,,T4APPROVALDATE,,,FSA,,
+Years used for rolling averages of full-time retention rate RET_FT[4/L4]_POOLED,student,retention_rate.pooled_yrs_used.full_time,integer,,POOLYRSRET_FT,,,IPEDS,,
+"Control of institution, per PEPS",school,ownership_peps,integer,,SCHTYPE,1,Public      ,FSA,,
+Title IV eligibility type,school,title_iv.eligibility_type,integer,,OPEFLAG,,unknown,IPEDS,Yes,
+"Percentage of full-time, first-time degree/certificate-seeking undergraduate students awarded a Pell Grant",aid,ftft_pell_grant_rate,float,,FTFTPCTPELL,,,IPEDS,,"The proportion of full-time, first-time undergraduates who received a Pell grant in the academic year, calculated from the IPEDS Student Financial Aid component. This metric is calculated by IPEDS as the quotient of the number of full-time, first-time Pell grant recipients divided by the count of all full-time, first-time undergraduates for either a fall enrollment cohort (for institutions that primarily follow an academic year calendar system) or a full-year enrollment cohort (for institutions that primarily follow a continuous enrollment or program-based calendar system). Proportions are expressed as decimals rounded to four decimal places, so, for example, 0.1234 equals 12.34 percent. This metric is not available prior to the 2008-09 academic year."
+"Percentage of full-time, first-time degree/certificate-seeking undergraduate students awarded a federal loan",aid,ftft_federal_loan_rate,float,,FTFTPCTFLOAN,,,IPEDS,,"The proportion of full-time, first-time undergraduates who received a federal loan in the academic year, calculated from values from the IPEDS Student Financial Aid component. Proportions are expressed as decimals rounded to four decimal places, so, for example, 0.1234 equals 12.34 percent. This metric is not available prior to the 2009-10 academic year."
+Unduplicated count of undergraduate students enrolled during a 12 month period,student,enrollment.undergrad_12_month,integer,,UG12MN,,,IPEDS,,
+"Number of full-time, first-time degree/certificate-seeking undergraduate students (denominator for percent full-time, first-time degree/certificate-seeking undergraduates receiving a pell grant or federal student loan)",student,ftft_undergrads_with_pell_grant_or_federal_student_loan,integer,,SCUGFFN,,,IPEDS,,
+Years used for rolling averages of FTFTPCTPELL_POOLED_SUPP and FTFTPCTFLOAN_POOLED_SUPP,aid,ftft_undergrads_pell_federal_loan_years,integer,,POOLYRS_FTFTAIDPCT,,,IPEDS,,
+"Number of full-time, first-time degree/certificate-seeking undergraduate students (denominator for percent full-time, first-time degree/certificate-seeking undergraduates receiving a pell grant or federal student loan), pooled in rolling averages",student,ftft_undergrads_with_pell_grant_or_federal_student_loan_pooled,integer,,SCUGFFN_POOLED,,,IPEDS,,
+Lower bound of estimated percentage range of students whose parents took out a PLUS loan,aid,plus_loan_pct_lower,integer,,PPLUS_PCT_LOW,,,FSA/IPEDS,Yes,
+Upper bound of estimated percentage range of students whose parents took out a PLUS loan,aid,plus_loan_pct_upper,integer,,PPLUS_PCT_HIGH,,,FSA/IPEDS,Yes,
+"Lower bound of estimated percentage range of students whose parents took out a PLUS loan, pooled in rolling averages and suppressed for small n size",aid,plus_loan_pct_lower_pooled,integer,,PPLUS_PCT_LOW_POOLED_SUPP,,,FSA/IPEDS,,
+"Upper bound of estimated percentage range of students whose parents took out a PLUS loan, pooled in rolling averages and suppressed for small n size",aid,plus_loan_pct_upper_pooled,integer,,PPLUS_PCT_HIGH_POOLED_SUPP,,,FSA/IPEDS,,
+Years used for rolling averages of PPLUS_PCT_LOW_POOLED_SUPP and PPLUS_PCT_HIGH_POOLED_SUPP,aid,plus_loan_pct_years,integer,,POOLYRS_PLUSPCT,,,FSA/IPEDS,,
+Number of graduates not working and not enrolled 3 years after completing,earnings,3_yrs_after_completion.not_working_not_enrolled.overall_count,integer,,COUNT_NWNE_3YR,,,Treasury,,
+Number of graduates working and not enrolled 3 years after completing,earnings,3_yrs_after_completion.working_not_enrolled.overall_count,integer,,COUNT_WNE_3YR,,,Treasury,,
+Number of graduates working and not enrolled who earned more than 150% of the single-person household poverty threshold 3 years after completing,earnings,3_yrs_after_completion.overall_count_over_poverty_line,integer,integer,CNTOVER150_3YR,,,Treasury,,
+Undergraduate federal student loan dollar-based 1-year repayment rate borrower count,repayment,1_yr_db_fed_repayment.ug.count,integer,,DBRR1_FED_UG_N,,,NSLDS,,
+Undergraduate federal student loan dollar-based 1-year repayment rate numerator,repayment,1_yr_db_fed_repayment.ug.numerator,long,,DBRR1_FED_UG_NUM,,,NSLDS,,
+Undergraduate federal student loan dollar-based 1-year repayment rate denominator,repayment,1_yr_db_fed_repayment.ug.denominator,long,,DBRR1_FED_UG_DEN,,,NSLDS,,
+Undergraduate federal student loan dollar-based 1-year repayment rate,repayment,1_yr_db_fed_repayment.ug.rate,float,,DBRR1_FED_UG_RT,,,NSLDS,,
+Undergraduate federal student loan dollar-based 5-year repayment rate borrower count,repayment,5_yr_db_fed_repayment.ug.count,integer,,DBRR5_FED_UG_N,,,NSLDS,,
+Undergraduate federal student loan dollar-based 5-year repayment rate numerator,repayment,5_yr_db_fed_repayment.ug.numerator,long,,DBRR5_FED_UG_NUM,,,NSLDS,,
+Undergraduate federal student loan dollar-based 5-year repayment rate denominator,repayment,5_yr_db_fed_repayment.ug.denominator,long,,DBRR5_FED_UG_DEN,,,NSLDS,,
+Undergraduate federal student loan dollar-based 5-year repayment rate,repayment,5_yr_db_fed_repayment.ug.rate,float,,DBRR5_FED_UG_RT,,,NSLDS,,
+Undergraduate federal student loan borrower-based 1-year borrower count,repayment,1_yr_bb_fed_repayment.ug.count,integer,,BBRR1_FED_UG_N,,,NSLDS,,
+Percentage of undergraduate federal student loan borrowers in forbearance after 1 year,repayment,1_yr_bb_fed_repayment.ug.forbearance,float,,BBRR1_FED_UG_FBR,,,NSLDS,,
+Undergraduate federal student loan borrower-based 2-year borrower count,repayment,2_yr_bb_fed_repayment.ug.count,integer,,BBRR2_FED_UG_N,,,NSLDS,,
+Number of borrowers with outstanding federal Direct Loan balances,aid,portfolio.direct_loans.count,integer,,LPSTAFFORD_CNT,,,NSLDS,,
+Total outstanding federal Direct Loan balance,aid,portfolio.direct_loans.amount,long,,LPSTAFFORD_AMT,,,NSLDS,,
+Federal School Code,root,fed_sch_cd,string,varchar(50),FEDSCHCD,,,FSA,,
+DOL approved training provider indicator,school,dolflag,integer,tinyint,DOLPROVIDER,0,Not matched to the DOL list,DOL/IPEDS,Yes,
+Median completion rate amongst insitutions with the same predominant degree category ,completion,rate_suppressed.consumer.median_by_pred_degree,float,float,MDCOMP_PD,,,IPEDS,Yes,
+Median average net price amongst insitituions with the same predominant degree category,cost,avg_net_price.consumer.median_by_pred_degree,float,float,MDCOST_PD,,,IPEDS,Yes,
+Median earnings of students working and not enrolled 10 years after entry,earnings,10_yrs_after_entry.consumer.median_by_pred_degree,float,float,MDEARN_PD,,,Treasury,Yes,
+Overall median of completion rate,completion,rate_suppressed.consumer.overall_median,float,float,MDCOMP_ALL,,,IPEDS,Yes,
+Overall median for average net price ,cost,avg_net_price.consumer.overall_median,float,float,MDCOST_ALL,,,IPEDS,Yes,
+Overall median earnings of students working and not enrolled 10 years after entry,earnings,10_yrs_after_entry.consumer.overall_median,float,float,MDEARN_ALL,,,Treasury,Yes,
+Years used for rolling averages of Pell Grant recipient completion rate C150_PELL_[4/L4]_POOLED,completion,pooled_yrs_used_pell_150,integer,,POOLYRS150_PELL,,,IPEDS,,
+Undergraduate federal student loan borrower-based 3-year borrower count,repayment,3_yr_bb_fed_repayment.ug.count,integer,,BBRR3_FED_UG_N,,,NSLDS,,
+Number of graduates working and not enrolled 1 year after completing,earnings,1_yr_after_completion.not_working_not_enrolled.overall_count,integer,,COUNT_NWNE_1YR,,,Treasury,,
+Number of graduates not working and not enrolled 1 year after completing,earnings,1_yr_after_completion.working_not_enrolled.overall_count,integer,,COUNT_WNE_1YR,,,Treasury,,
+Number of graduates working and not enrolled who earned more than 150% of the single-person household poverty threshold 1 year after completing,earnings,1_yr_after_completion.overall_count_over_poverty_line,integer,,CNTOVER150_1YR,,,Treasury,,
+"Median earnings of students working and not enrolled 6 years after entry in the lowest income tercile $0-$30,000",earnings,6_yrs_after_entry.median_earnings_lowest_tercile,integer,,MD_EARN_WNE_INC1_P6,,,Treasury,,
+Median earnings of non-male students working and not enrolled 6 years after entry,earnings,6_yrs_after_entry.median_earnings_non_male,integer,,MD_EARN_WNE_MALE0_P6,,,Treasury,,
+Undergraduate student to instructional faculty ratio,student,demographics.student_faculty_ratio,float,,STUFACR,,,IPEDS,Yes,
+Share of full time faculty that are Two or More Races,student,demographics.faculty.race_ethnicity.two_or_more,float,,IRPS_2MOR,,,IPEDS,Yes,
+Share of full time faculty that are American Indian or Alaskan Native,student,demographics.faculty.race_ethnicity.aian,float,,IRPS_AIAN,,,IPEDS,Yes,
+Share of full time faculty that are Asian,student,demographics.faculty.race_ethnicity.asian,float,,IRPS_ASIAN,,,IPEDS,Yes,
+Share of full time faculty that are Black or African American,student,demographics.faculty.race_ethnicity.black,float,,IRPS_BLACK,,,IPEDS,Yes,
+Share of full time faculty that are Hispanic,student,demographics.faculty.race_ethnicity.hispanic,float,,IRPS_HISP,,,IPEDS,Yes,
+Share of full time faculty that are Native Hawaiian or Other Pacific Islander,student,demographics.faculty.race_ethnicity.nhpi,float,,IRPS_NHPI,,,IPEDS,Yes,
+Share of full time faculty that are U.S. Nonresidents,student,demographics.faculty.race_ethnicity.non_resident_alien,float,,IRPS_NRA,,,IPEDS,Yes,
+Share of full time faculty that are of unknown race/ethnicity,student,demographics.faculty.race_ethnicity.unknown,float,,IRPS_UNKN,,,IPEDS,Yes,
+Share of full time faculty that are White,student,demographics.faculty.race_ethnicity.white,float,,IRPS_WHITE,,,IPEDS,Yes,
+Share of full time faculty that are men,student,demographics.faculty.men,float,,IRPS_WOMEN,,,IPEDS,Yes,
+Share of full time faculty that are women,student,demographics.faculty.women,float,,IRPS_MEN,,,IPEDS,Yes,
+Median earnings of graduates working and not enrolled 1 year after completing,earnings,1_yr_after_completion.median,integer,,MD_EARN_WNE_1YR,,,Treasury,,
+Number of graduates not working and not enrolled 4 years after completing,earnings,4_yrs_after_completion.not_working_not_enrolled.overall_count,integer,,COUNT_NWNE_4YR,,,Treasury,,
+Number of graduates working and not enrolled 4 years after completing,earnings,4_yrs_after_completion.working_not_enrolled.overall_count,integer,,COUNT_WNE_4YR,,,Treasury,,
+Median earnings of graduates working and not enrolled 4 years after completing,earnings,4_yrs_after_completion.median,integer,,MD_EARN_WNE_4YR,,,Treasury,,
+Undergraduate federal student loan borrower-based 4-year borrower count,repayment,4_yr_bb_fed_repayment.ug.count,integer,,BBRR4_FED_UG_N,,,NSLDS,,
+Control of institution (PEPS),school,peps_ownership,string,,CONTROL_PEPS,,,PEPS,,
+Address of institution,school,address,string,,ADDR,,,IPEDS,,
